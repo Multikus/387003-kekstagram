@@ -1,5 +1,5 @@
 'use strict';
-var QUANTITY_GENERATE_CARD = 25;
+// var QUANTITY_GENERATE_CARD = 25;
 
 var comments = [
   'Всё отлично!',
@@ -24,29 +24,29 @@ var randomMassive =
 
 // функция генерация числа для фотографии
 
-function getRandomNumber (min, max) {
-  var rand = min - 0.5 + Math.random() * (max - min + 1)
+function getRandomNumber(min, max) {
+  var rand = min - 0.5 + Math.random() * (max - min + 1);
   rand = Math.round(rand);
   return rand;
-};
+}
 
 // для значения максимального кол-ва комментариев
 var lengthArrComments = 0;
-for ( var i = 0; i <= comments.length; i++) {
-  var lengthArrComments = Math.round(comments.length / 2);
-};
+for (var x = 0; x <= comments.length; x++) {
+  lengthArrComments = Math.round(comments.length / 2);
+}
 
 var lengthArrAutorName = 0;
-for ( var i = 0; i <= autorName.length - 1; i++) {
-  var lengthArrAutorName = Math.round(autorName.length);
+for (var j = 0; j <= autorName.length - 1; j++) {
+  lengthArrAutorName = Math.round(autorName.length);
   lengthArrAutorName = getRandomNumber(0, lengthArrAutorName);
-};
+}
 
-// alert(comments[getRandomNumber(1, lengthArrComments)]);
+// тут должна быть функция которая генерирует карточку.
 
+/*
 var createCard = function (url, likes, message, name) {
   for (var i = 0; i <= QUANTITY_GENERATE_CARD; i++) {
-
   }
 };
-
+*/
