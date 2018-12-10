@@ -10,15 +10,15 @@ var comments = [
   'Лица у людей на фотке перекошены, как будто их избивают. Как можно было поймать такой неудачный момент?!'
 ];
 
-var autorName = ['Артём', 'Ольга', 'Игорь', 'Александр', 'Мария', 'Надежда'];
-
+var autorName = ['Артём', 'Ольга', 'Игорь', 'Александр', 'Мария', 'Надежда', 'Анна', 'Дмитрий', 'Иван', 'Наталья'];
+var photoNumber = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25];
 // Создаём случайный список
 
 var randomMassive =
 {
   url: 'img/' + getRandomNumber(1, 25) + '.svg',
   likes: getRandomNumber(15, 200),
-  message: getRandomNumber(1, lengthArrComments),
+  message: getRandomMessage(1, lengthArrComments),
   name: autorName[lengthArrAutorName]
 };
 
@@ -28,6 +28,14 @@ function getRandomNumber(min, max) {
   var rand = min - 0.5 + Math.random() * (max - min + 1);
   rand = Math.round(rand);
   return rand;
+}
+
+// функция выбора комментария
+var urlPhotoNumber = 0;
+function getRandomMessage(min, max) {
+  for (var i = 0; i <= photoNumber.length - 1; i++)
+    urlPhotoNumber = getRandomNumber(0, photoNumber.length - 1);
+    photoNumber.splice(urlPhotoNumber, 1);
 }
 
 // для значения максимального кол-ва комментариев
@@ -42,11 +50,3 @@ for (var j = 0; j <= autorName.length - 1; j++) {
   lengthArrAutorName = getRandomNumber(0, lengthArrAutorName);
 }
 
-// тут должна быть функция которая генерирует карточку.
-
-/*
-var createCard = function (url, likes, message, name) {
-  for (var i = 0; i <= QUANTITY_GENERATE_CARD; i++) {
-  }
-};
-*/
