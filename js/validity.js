@@ -1,5 +1,5 @@
 'use strict';
-
+// проверка на ошшибки.
 (function () {
   var MAX_LENGTH_TAG = 20;
   var MAX_COUNT_TAG = 5;
